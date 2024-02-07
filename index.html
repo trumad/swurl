@@ -23,7 +23,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="referrer" content="origin">
   <meta name="description" content="Search Google, YouTube, Instagram, TikTok, Twitter, Reddit, Amazon, Images, News, &amp; more. See all results by swiping — no clicking."/>
-  <meta property="og:url" content="https://swurl.com/"/>
+  <meta property="og:url" content="https://trumad.github.io/swurl/"/>
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Swurl"/>
   <meta property="og:title" content="Swurl - Search everything"/>
@@ -77,10 +77,10 @@
       "@context":"http://schema.org",
       "@type":"WebSite",
       "name":"Swurl",
-      "url":"https://swurl.com/",
+      "url":"https://trumad.github.io/swurl/",
       "potentialAction":{
         "@type":"SearchAction",
-        "target":"https://swurl.com/?q={search_term_string}",
+        "target":"https://trumad.github.io/swurl/?q={search_term_string}",
         "query-input":"required name=search_term_string"
       }
     }
@@ -1885,7 +1885,7 @@ function web(q)
         $.getJSON('https://duckduckgo.com/?q='+encodeURIComponent(q)+'&format=json&callback=?&no_redirect=1&skip_disambig=1', function(data){if(Cookies.get('debug')!==undefined)console.log(data);
           if(typeof data.Answer==='string' && data.Answer!='' && data.AnswerType!='duckduckgo')
           {
-            $('#web > ol').prepend('<li class="list-group-item border-0 pt-0 pb-3 lh-sm"><div id="answer" class="alert alert-primary m-0 p-2" role="alert"><h6 class="alert-heading"><strong>Answer:</strong></h6>'+data.Answer.replace('https://duckduckgo.com/?q=', 'https://swurl.com/?q=').replace('&iar=maps_maps', '')+'</div></li>');
+            $('#web > ol').prepend('<li class="list-group-item border-0 pt-0 pb-3 lh-sm"><div id="answer" class="alert alert-primary m-0 p-2" role="alert"><h6 class="alert-heading"><strong>Answer:</strong></h6>'+data.Answer.replace('https://duckduckgo.com/?q=', 'https://trumad.github.io/swurl/?q=').replace('&iar=maps_maps', '')+'</div></li>');
 //                ga('send', 'event', 'answer', 'show', q);
           }
           else if(data.Redirect!='')    // https://duckduckgo.com/api !bang redirect
@@ -3661,8 +3661,8 @@ if(!isMobile.any())
 <script>document.write('<body'+((!q) ? ' class="homepage"' : '')+(((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) || Cookies.get('enabledark')!==undefined) ? ' data-theme="dark"' : '')+'>');</script>
  <nav class="navbar fixed-top navbar-expand">
     <div class="container-fluid px-3 pe-2">
-      <a class="navbar-brand me-2" href="https://swurl.com/" onclick="pagehide()" tabindex="-1"><img class="logo" src="https://swurl.com/swurl.png" alt="Swurl" title="Swurl" width="32" height="32"></a>
-      <form id="search" class="w-100" role="search" action="https://swurl.com/" method="get" onsubmit="if(document.getElementById('q').value==''){document.getElementById('q').focus(); return false;}">
+      <a class="navbar-brand me-2" href="https://trumad.github.io/swurl/" onclick="pagehide()" tabindex="-1"><img class="logo" src="https://swurl.com/swurl.png" alt="Swurl" title="Swurl" width="32" height="32"></a>
+      <form id="search" class="w-100" role="search" action="https://trumad.github.io/swurl/" method="get" onsubmit="if(document.getElementById('q').value==''){document.getElementById('q').focus(); return false;}">
         <script>document.write('<input type="text" name="q" id="q" class="form-control form-control-lg rounded-pill" placeholder="'+__('Search everything')+'" aria-label="'+__('Search everything')+'" value="'+((q) ? escapeHtml(q) : '')+'" autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="off"'+((LANG=='ar') ? ' dir="rtl"' : '')+'>');</script>
         <button type="button" id="reset" class="btn btn-lg position-absolute top-0 end-0 pt-2 pb-2 ps-1 pe-3" tabindex="-1" title="Clear"/><i class="fa-solid fa-xmark"></i></button>
         <button type="submit" class="btn btn-link btn-lg position-absolute top-0 start-0 pt-2 pb-2 ps-3 pe-0" tabindex="-1" title="Search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
@@ -3696,7 +3696,7 @@ if(!isMobile.any())
   <script>
     var updateversion='10';
 //    var updatemessage = '<ul class="mb-1"><li>Question & People search intent added</li><li>Type / or h — go to search box</li><li><a href="https://swurl.com/?q=oblivion+trailer">Video</a> search intent added</li><li><a href="https://swurl.com/?q=apple+computer">Navigational</a> search intent added</li><li><a href="https://swurl.com/?q=best+laundry+detergent">Review</a> search intent added</li><li><span style="background-color:#333;color:#eee;">&nbsp;<strong>Dark Mode</strong>&nbsp;</span> support added!</li><li><a href="https://swurl.com/?q=chicken+recipes">Recipe</a>/<a href="https://swurl.com/?q=javascript+audio+player">Coding</a>/<a href="https://swurl.com/?q=intermittent+fasting">Health</a>/<a href="https://swurl.com/?q=Gabapentin">Medicine</a> added</li><li><a href="mailto:&#x73;&#x77;&#x75;&#x72;&#x6C;&#x68;&#x65;&#x6C;&#x70;&#x40;&#x70;&#x69;&#x63;&#x63;&#x6C;&#x69;&#x63;&#x6B;&#x2E;&#x63;&#x6F;&#x6D;?subject=Swurl"><strong>Email us</strong></a> - We <i class="fa-solid fa-heart text-danger"></i> your feedback!</li></ul>';
-    var updatemessage = '<ul class="mb-1"><li>Share buttons added, but will hopefully<br>get screenshot images next...</li><li>Sort by date & other sorts now added</li><li><a href="https://swurl.com/?q=twitter">Twitter</a> search redesigned & improved</li><li><a href="mailto:&#x73;&#x77;&#x75;&#x72;&#x6C;&#x68;&#x65;&#x6C;&#x70;&#x40;&#x70;&#x69;&#x63;&#x63;&#x6C;&#x69;&#x63;&#x6B;&#x2E;&#x63;&#x6F;&#x6D;?subject=Swurl"><strong>Email us</strong></a> - We <i class="fa-solid fa-heart text-danger"></i> your feedback!</li></ul>';
+    var updatemessage = '<ul class="mb-1"><li>Share buttons added, but will hopefully<br>get screenshot images next...</li><li>Sort by date & other sorts now added</li><li><a href="https://trumad.github.io/swurl/?q=twitter">Twitter</a> search redesigned & improved</li><li><a href="mailto:&#x73;&#x77;&#x75;&#x72;&#x6C;&#x68;&#x65;&#x6C;&#x70;&#x40;&#x70;&#x69;&#x63;&#x63;&#x6C;&#x69;&#x63;&#x6B;&#x2E;&#x63;&#x6F;&#x6D;?subject=Swurl"><strong>Email us</strong></a> - We <i class="fa-solid fa-heart text-danger"></i> your feedback!</li></ul>';
 // This messes up on Android...
     updatemessage = '';
     if(!q && Cookies.get('hideupdate'+updateversion)===undefined && updatemessage)
